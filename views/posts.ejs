@@ -1,0 +1,8 @@
+<!-- 主页的模板 -->
+<!-- 主页与用户页通过 url 中的 author 区分。 -->
+
+<%- include('header') %>
+<% posts.forEach(function (post) { %>
+  <%- include('components/post-content', { post: post }) %>
+<% }) %>
+<%- include('footer') %>

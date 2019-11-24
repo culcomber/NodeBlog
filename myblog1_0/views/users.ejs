@@ -1,0 +1,20 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {padding: 50px;font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;}
+    </style>
+  </head>
+  <body>
+    <h1><%= name.toUpperCase() %></h1>  .toUpperCase() 将名字转化为大写 
+    <p>hello, <%= name %></p>
+  </body>
+</html>
+
+模板引擎通常不是一个页面对应一个模板，
+而是把模板拆成可复用的模板片段组合使用，如在 views 下新建 header.ejs 和 footer.ejs，并修改 users.ejs： 
+要用 <%- include('header') %> 而不是 <%= include('header') %>-->
+<%- include('header') %>
+  <h1><%= name.toUpperCase() %></h1>
+  <p>hello, <%= name %></p>
+<%- include('footer') %>
