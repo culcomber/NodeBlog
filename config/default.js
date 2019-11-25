@@ -4,7 +4,7 @@
 // mongodb: mongodb 的地址，以 mongodb:// 协议开头，myblog 为 db 名
 
 module.exports = {
-  port: 3001,
+  port: 80,
   session: {
     secret: 'myblogtest',
     key: 'myblogtest',

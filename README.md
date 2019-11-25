@@ -7,10 +7,13 @@
 - models: 存放操作数据库的文件
 - public: 存放静态文件，如样式、图片等
 - routes: 存放路由文件
+  - index 路由跳转
 - views: 存放模板文件
 - index.js: 程序主文件
 - package.json: 存储项目名、描述、作者、依赖等等信息
 - config 端口号
+- log 日志
+- .gitignore   忽略相关文件 --需要在不同文件夹下同时建立
 
 ## 安装依赖模块
 

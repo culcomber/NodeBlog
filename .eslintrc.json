@@ -9,7 +9,13 @@
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        // test 需要
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "after": true,
+        "it": true
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {

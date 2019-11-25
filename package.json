@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha",
+    "start": "cross-env NODE_ENV=production pm2 start index.js --name 'myblog'"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +29,11 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "cross-env": "^6.0.3",
     "eslint": "^6.7.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.2.2",
+    "supertest": "^4.0.2"
   }
 }

@@ -1,0 +1,10 @@
+# 只有 config/default.js 会加入 git 的版本控制，而 config 目录下的其他配置文件则会被忽略
+config/*
+!config/default.*
+
+npm-debug.log
+node_modules
+coverage
+
+# 把线上配置加入到 git 是一个不安全的行为，通常你需要本地或者线上环境手动创建 config/production.js，
+# 然后添加一些线上的配置（如：mongodb 配置）即可覆盖相应的 default 配置。
