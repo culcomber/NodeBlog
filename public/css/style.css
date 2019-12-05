@@ -3,16 +3,16 @@
 body {
   width: 1100px;
   height: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding-top: 40px;
 }
 
 a:hover {
-  border-bottom: 3px solid #4fc08d;
+  border-bottom: 3px solid #51c4d3;
 }
 
 .button {
-  background-color: #4fc08d !important;
+  background-color: #51c4d3 !important;
   color: #fff !important;
 }
 
@@ -32,7 +32,7 @@ a:hover {
 }
 
 .nav h1 {
-  color: #4fc08d;
+  color: #51c4d3;
   display: inline-block;
   margin: 10px 0;
 }
@@ -59,7 +59,7 @@ a:hover {
 /* ---------- post-content ---------- */
 
 .post-content h3 a {
-  color: #4fc08d !important;
+  color: #51c4d3 !important;
 }
 
 .post-content .tag {

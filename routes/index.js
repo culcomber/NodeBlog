@@ -1,29 +1,29 @@
-module.exports = function (app) {
-  //首页跳转
-  app.get('/', function (req, res) {
-    res.redirect('/posts')
-  })
-  // 正常路由跳转
-  app.use('/signup', require('./signup'))
-  app.use('/signin', require('./signin'))
-  app.use('/signout', require('./signout'))
-  app.use('/posts', require('./posts'))
-  app.use('/comments', require('./comments'))
+//routes/index.js
+module.exports = function(app){
+    // 首页请求
+    app.get('/',function(req,res,next){
+       res.redirect('posts');
 
-  // 错误页面
-  // 将错误信息用页面通知展示的功能，刷新页面将会跳转到主页并显示『权限不足』的红色通知。
-  app.use(function (err, req, res, next) {
-    console.error(err)
-    req.flash('error', err.message)
-    res.redirect('/posts')
-  })
+    });
 
-  // 404 page
-  app.use('/comments', require('./comments'))
-  app.use(function (req, res) {
-    if (!res.headersSent) {
-      res.status(404).render('404')
-    }
-  })
-}
+    // 跨域处理
+    app.use(function(req, res, next){
+        res.header('Access-Control-Allow-Origin','*');
+        res.header('Access-Control-Allow-Credentials', true);
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        res.header('Access-Control-Allow-Methods','PUT,POST,GET,DELETE,OPTIONS');
+        res.header('X-Powered-By',' 3.2.1');
+        next();
+    });
 
+    // 设置二级路由
+    app.use('/',require('./signup'));
+
+    app.use('/',require('./signin'));
+
+    app.use('/',require('./signout'));
+
+    app.use('/',require('./posts'));
+
+    app.use('/',require('./upload_qiniu.js'));
+};
